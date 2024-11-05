@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Resume Form -->
+    <div class="form-container">
+      <h2>Enter Your Details</h2>
+      <form id="resume-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+        
+        <label for="title">Job Title:</label>
+        <input type="text" id="title" name="title" placeholder="Job title">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email">
+
+        <label for="experience">Work Experience:</label>
+        <textarea id="experience" name="experience" rows="4" placeholder="Describe your work experience"></textarea>
+
+        <button type="button" onclick="updateResume()">Generate Resume</button>
+      </form>
+    </div>
+
+    <!-- Resume Preview -->
+    <div class="preview-container">
+      <h2>Your Resume Preview</h2>
+      <div id="resume-preview">
+        <h1 id="preview-name"></h1>
+        <h3 id="preview-title"></h3>
+        <p id="preview-email"></p>
+        <h4>Work Experience</h4>
+        <p id="preview-experience"></p>
+      </div>
+
+      <button onclick="downloadPDF()">Download as PDF</button>
+    </div>
+  </div>
+
+  <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
